@@ -6,7 +6,7 @@
         {
             try
             {
-                // Solicitar datos del alumno y de la asignatura
+             
                 Console.WriteLine("Ingrese el nombre del alumno:");
                 string nombreAlumno = Console.ReadLine();
 
@@ -25,10 +25,10 @@
                 Console.WriteLine("Ingrese el nombre del docente:");
                 string nombreDocente = Console.ReadLine();
 
-                // Instanciar el objeto Asignatura
+               
                 Asignatura asignatura = new Asignatura(nombreAlumno, numeroCuenta, email, nombreAsignatura, horario, nombreDocente);
 
-                // Solicitar y validar notas
+                
                 Console.WriteLine("Ingrese la nota del primer parcial (máximo 30):");
                 asignatura.N1 = ValidarNota(Console.ReadLine(), 30);
 
@@ -38,7 +38,7 @@
                 Console.WriteLine("Ingrese la nota del tercer parcial (máximo 40):");
                 asignatura.N3 = ValidarNota(Console.ReadLine(), 40);
 
-                // Imprimir los datos y resultados
+                
                 asignatura.Imprimir();
             }
             catch (Exception ex)
@@ -47,7 +47,7 @@
             }
         }
 
-        // Método de validación de notas
+      
         static int ValidarNota(string input, int maxNota)
         {
             if (!int.TryParse(input, out int nota) || nota < 0 || nota > maxNota)
